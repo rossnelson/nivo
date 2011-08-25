@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["axcess1"]
   s.email       = ["axcess1@me.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Easily add nivo slider and slide management to dust}
+  s.description = %q{Easily add nivo slider and slide management to dust}
 
   s.rubyforge_project = "nivo"
 

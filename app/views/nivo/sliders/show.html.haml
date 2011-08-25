@@ -1,0 +1,28 @@
+- title "Slider"
+
+.item
+
+  .ui-widget.ui-helper-clearfix{:style => "float:right"}
+    =link_to '', edit_slider_path(@slider), :class => 'ui-icon ui-icon-pencil edit tip', :title => "Edit This Item"
+    =link_to "", @slider, :confirm => 'Are you sure?', :method => :delete, :class => 'ui-icon ui-icon-close destroy tip', :title => "Destroy This Item"
+
+  %h3= link_to @slider.caption, @slider
+  %p
+    = link_to "Preview Slider", @slider, :class => 'remote_iframe'
+
+  %p
+    %strong Caption:
+    = @slider.caption
+  %p
+    %strong Url:
+    = @slider.url
+  %p
+    %strong Active:
+    = @slider.active
+  %p
+    %strong Lft:
+    = @slider.lft
+  %p
+    %strong Rgt:
+    = @slider.rgt
+

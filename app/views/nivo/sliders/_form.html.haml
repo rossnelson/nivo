@@ -1,0 +1,27 @@
+= content_for :head do
+  = javascript_include_tag :ckeditor
+
+- form_for @slider, :validate => true do |f|
+  = f.error_messages
+  .item 
+    = f.label :caption
+    %br
+    = f.text_field :caption, :class => 'field'
+  .item 
+    = f.label :url
+    %br
+    = f.text_field :url, :class => 'field'
+  .item 
+    = f.label :active
+    %br
+    = f.check_box :active, :class => 'field'
+  .item 
+    = f.label :lft
+    %br
+    = f.text_field :lft, :class => 'field'
+  .item 
+    = f.label :rgt
+    %br
+    = f.text_field :rgt, :class => 'field'
+  .item
+    = f.submit
