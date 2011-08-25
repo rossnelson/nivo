@@ -1,8 +1,10 @@
 require 'helper'
 
 class TestNivo < Test::Unit::TestCase
-  should "probably rename this file and start testing for real" do
-    flunk "hey buddy, you should probably rename this file and start testing for real"
+  should "Find out if Nivo::Helper exists" do
+    assert_equal Class, Nivo::Helper.class, "Nivo::Helper is a #{Nivo::Helper.class}"
   end
+
+  
 end
 
