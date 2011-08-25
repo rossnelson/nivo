@@ -7,8 +7,8 @@ module Nivo
   class Engine < Rails::Engine
 
     # Config defaults
-    config.widget_factory_name = "nivo"
-    config.mount_at = '/'
+    config.slider_factory_name = "nivo"
+    config.mount_at = '/nivo'
 
     # Load rake tasks
     rake_tasks do

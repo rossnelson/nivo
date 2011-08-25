@@ -9,7 +9,7 @@ class CreateSliders < ActiveRecord::Migration
     end
   end
 
-  # CmsMenuItem.create({:title =>"Sliders", :controller_name => "sliders", :url => "/sliders"})
+  # 
 
   def self.down
     drop_table :sliders
