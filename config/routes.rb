@@ -5,7 +5,6 @@ Rails.application.routes.draw do |map|
   match mount_at => 'nivo/sliders#index'
 
   map.resources :sliders, :controller => "nivo/sliders",
-                          :path_prefix => mount_at,
-                          :name_prefix => "nivo_"
-
+                               :path_prefix => mount_at,
+                               :name_prefix => ""
 end
