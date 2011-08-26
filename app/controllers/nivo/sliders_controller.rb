@@ -45,7 +45,7 @@ module Nivo
       @slider = Nivo::Slider.find(params[:id])
       @slider.destroy
       flash[:notice] = "Successfully destroyed slider."
-      redirect_to sliders_url
+      redirect_to nivo_sliders_url
     end
 
   end
