@@ -5,7 +5,7 @@ require "nivo/version"
 Gem::Specification.new do |s|
   s.name        = "nivo"
   s.version     = Nivo::VERSION
-  s.authors     = ["axcess1"]
+  s.authors     = ["Ross Nelson"]
   s.email       = ["axcess1@me.com"]
   s.homepage    = ""
   s.summary     = %q{Easily add nivo slider and slide management to dust}
@@ -18,7 +18,10 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
+  ##
   # specify any dependencies here; for example:
+  #
   s.add_development_dependency "shoulda"
-  # s.add_development_dependency "rails"
+
+  s.add_runtime_dependency "paperclip"
 end
