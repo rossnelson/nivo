@@ -1,24 +1,26 @@
 module Nivo
   class SlidersController < ApplicationController
 
-    filter_resource_access
+    filter_access_to :all
+
+    unloadable
 
     layout 'cms'
 
     def index
-      @sliders = Nivo::Slider.page(params[:search], params[:page]) 
+      @sliders = Slider.page(params[:search], params[:page]) 
     end
 
     def show
-      @slider = Nivo::Slider.find(params[:id])
+      @slider = Slider.find(params[:id])
     end
 
     def new
-      @slider = Nivo::Slider.new
+      @slider = Slider.new
     end
 
     def create
-      @slider = Nivo::Slider.new(params[:slider])
+      @slider = Slider.new(params[:slider])
       if @slider.save
         flash[:notice] = "Successfully created slider."
         redirect_to @slider
@@ -28,11 +30,11 @@ module Nivo
     end
 
     def edit
-      @slider = Nivo::Slider.find(params[:id])
+      @slider = Slider.find(params[:id])
     end
 
     def update
-      @slider = Nivo::Slider.find(params[:id])
+      @slider = Slider.find(params[:id])
       if @slider.update_attributes(params[:slider])
         flash[:notice] = "Successfully updated slider."
         redirect_to @slider
@@ -42,7 +44,7 @@ module Nivo
     end
 
     def destroy
-      @slider = Nivo::Slider.find(params[:id])
+      @slider = Slider.find(params[:id])
       @slider.destroy
       flash[:notice] = "Successfully destroyed slider."
       redirect_to sliders_url

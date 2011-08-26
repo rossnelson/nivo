@@ -1,5 +1,5 @@
 #searchbox
-  = form_tag nivo_sliders_path, :method => 'get' do
+  = form_tag sliders_path, :method => 'get' do
     = text_field_tag :search, params[:search], :class => "input-text", :placeholder => 'Search Sliders by Caption'
     = image_submit_tag "admin/blank.png", :class => "image-submit"
 

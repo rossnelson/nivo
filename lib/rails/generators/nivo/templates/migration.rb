@@ -5,7 +5,7 @@ class CreateNivoTables < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :sliders
+    drop_table :nivo_sliders
     item = CmsMenuItem.find_by_title("Sliders")
     item.destroy
   end
