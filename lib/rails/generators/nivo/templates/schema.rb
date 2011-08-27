@@ -4,6 +4,8 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string :url
     t.boolean :active
     t.integer :position
+    t.integer :width
+    t.integer :height
     t.string :image_file_name
     t.string :image_content_type
     t.integer :image_file_size

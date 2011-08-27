@@ -9,7 +9,7 @@
 - @sliders.each do |slider|
   .item
     .ui-widget.ui-helper-clearfix{:style => 'float:right'}
-      = link_to '', edit_slider_path(slider), :class => 'ui-icon	ui-icon-pencil edit tip', :title => "Edit This Item"
+      = link_to '', edit_slider_path(slider), :class => 'ui-icon ui-icon-pencil edit tip', :title => "Edit This Item"
       = link_to '', slider, :confirm => 'Are you sure?', :method => :delete, :class => 'ui-icon ui-icon-close destroy tip', :title => "Destroy This Item"
 
     %h3= link_to slider.caption, slider

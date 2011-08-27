@@ -1,3 +1,14 @@
-.slides
-  - sliders.each do |slider|
-    = link_to image_tag(slider.image.url, :class => "slide"), slider.url, :class => "slide_link"
+
+= stylesheet_link_tag "nivo-slider", "default"
+
+= content_for :js do
+  = javascript_include_tag "nivo-slider"
+  :javascript
+    $(document).ready(function() {
+      $('.slides').nivoSlider(#{Nivo::Config.file['nivo_options'].to_json});
+    });
+
+.theme-default
+  .slides{ :style =>"width:#{sliders.first.width}px;"  }
+    - sliders.each do |slider|
+      = link_to image_tag(slider.image.url(:slide), :height => slider.height, :width => slider.width, :class => "slide"), slider.url, :class => "slide_link"

@@ -8,6 +8,10 @@ class NivoGenerator < Rails::Generators::Base
     File.join(File.dirname(__FILE__), 'templates')
   end
 
+  def create_config
+    copy_file "nivo_config.yml", "config/nivo_config.yml"
+  end
+
   def self.next_migration_number(dirname) #:nodoc:
     if ActiveRecord::Base.timestamped_migrations
       Time.now.utc.strftime("%Y%m%d%H%M%S")
