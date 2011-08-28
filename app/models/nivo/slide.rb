@@ -38,8 +38,8 @@ module Nivo
     ##
     # Find for admin index
     #
-    def self.page(search, page)
-      with_permissions_to(:manage).search(search).order("position").paginate(:per_page => 12, :page => page)
+    def self.page(search)
+      with_permissions_to(:manage).search(search).order("position")
     end
 
     ##

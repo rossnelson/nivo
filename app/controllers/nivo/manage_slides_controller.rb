@@ -7,11 +7,11 @@ module Nivo
 
     layout 'cms'
 
-    def index
-      @slides = Nivo::Slide.sort(params[:slides])
+    def create
+      Nivo::Slide.sort(params[:slides])
 
-      flash[:notice] = "Successfully updated slide."
-      redirect_to nivo_slides_path
+      flash[:notice] = "Successfully sorted slides."
+      redirect_to nivo_slides_url
     end
 
   end

@@ -8,9 +8,7 @@ Rails.application.routes.draw do |map|
                                :path_prefix => mount_at,
                                :name_prefix => "nivo_"
 
-  match mount_at => 'nivo/manage_slides#index'
-
-  map.resources :manage_slides, :only => [:index],
+  map.resources :manage_slides, :only => [:create],
                                 :controller => "nivo/manage_slides",
                                 :path_prefix => mount_at,
                                 :name_prefix => "nivo_"

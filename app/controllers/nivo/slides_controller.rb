@@ -8,7 +8,7 @@ module Nivo
     layout 'cms'
 
     def index
-      @slides = Nivo::Slide.page(params[:search], params[:page]) 
+      @slides = Nivo::Slide.page(params[:search]) 
     end
 
     def show
