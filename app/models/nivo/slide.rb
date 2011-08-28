@@ -5,7 +5,6 @@ module Nivo
     has_attached_file :image, :styles => Nivo::Config.file['slide_dimensions'].symbolize_keys
 
     ##
-    #
     # Save the image dimensions only when a new photo is uploaded
     #
     after_post_process :save_image_dimensions
@@ -16,7 +15,6 @@ module Nivo
     end
 
     ##
-    #
     # html options for the slide image_tag
     #
     def image_options
@@ -29,7 +27,6 @@ module Nivo
     end
 
     ##
-    #
     # Find for slideshow
     #
     def self.rotate
@@ -37,7 +34,6 @@ module Nivo
     end
 
     ##
-    #
     # Find for admin index
     #
     def self.page(search, page)
@@ -45,7 +41,6 @@ module Nivo
     end
 
     ##
-    #
     # currently used in self.page
     #
     def self.search(search)
