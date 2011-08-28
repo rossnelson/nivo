@@ -32,9 +32,11 @@ This will create the necessary migrations and copy the `nivo_config.yml` to the 
 Use Me
 =====
 
+
 The following view helpers are shown in haml.
 
-After you run `rake db:migrate` add this to your application layout
+Edit the `nivo_config.yml` to your liking.
+Then after you run `rake db:migrate` add this to your application layout
 
     = show_slider?
 
