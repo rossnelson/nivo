@@ -37,11 +37,17 @@ The following view helpers are shown in haml.
 After you run `rake db:migrate` add this to your application layout
 
     = show_slider?
-    
+
+and insert
+
+    = yield(:js)
+
+after your jquery inclusion
+
 On each view you would like the slider to be visible insert 
 
     - slider
-    
+
 if the variable `slider` is set, `show_slider?` will render the slideshow partial and include the stylesheets and javascripts required by Nivo Slider.
 
 My Extras
