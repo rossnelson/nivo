@@ -9,6 +9,6 @@
     });
 
 .theme-default
-  .slides{ :style =>"width:#{sliders.first.width}px;"  }
-    - sliders.each do |slider|
-      = link_to image_tag(slider.image.url(:slide), :height => slider.height, :width => slider.width, :class => "slide"), slider.url, :class => "slide_link"
+  .slides{ :style =>"width:#{slides.first.width}px;"  }
+    - slides.each do |slide|
+      = link_to image_tag(slide.image.url(:slide), slide.image_options), slide.url, :class => "slide_link"

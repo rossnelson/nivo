@@ -1,7 +1,7 @@
 require "nivo/version"
 require "nivo/helper"
 require "nivo/config"
-require "nivo/slider_sort"
+require "nivo/slide_sort"
 require 'engine' if defined?(Rails) && Rails::VERSION::MAJOR == 3
 
 if defined?(ActionView::Base)

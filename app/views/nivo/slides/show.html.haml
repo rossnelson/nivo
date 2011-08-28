@@ -1,0 +1,18 @@
+- title "Slide"
+
+.item
+  .ui-widget.ui-helper-clearfix{:style => "float:right"}
+    =link_to '', edit_nivo_slide_path(@slide), :class => 'ui-icon ui-icon-pencil edit tip', :title => "Edit This Item"
+    =link_to "", @slide, :confirm => 'Are you sure?', :method => :delete, :class => 'ui-icon ui-icon-close destroy tip', :title => "Destroy This Item"
+  %h3= link_to @slide.caption, @slide
+  %p
+    = link_to image_tag(@slide.image.url), @slide, :class => 'remote_iframe'
+  %p
+    %strong Caption:
+    = @slide.caption
+  %p
+    %strong Url:
+    = @slide.url
+  %p
+    %strong Active:
+    = @slide.active

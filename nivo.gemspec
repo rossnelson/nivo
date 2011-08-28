@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   #
   s.add_development_dependency "shoulda"
   s.add_runtime_dependency "paperclip"
+  s.add_runtime_dependency "haml"
 end
