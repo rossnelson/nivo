@@ -59,7 +59,7 @@ if the variable `slider` is set, `show_slider?` will render the slideshow partia
 My Extras
 =====
 
-We hate engines that you can't customize. With that in mind the are 3 more gnerators available.
+We hate engines that you can't customize. With that in mind the are 3 more generators available.
 
     nivo:views
     nivo:controller
