@@ -50,6 +50,10 @@ On each view you would like the slider to be visible insert
 
 if the variable `slider` is set, `show_slider?` will render the slideshow partial and include the stylesheets and javascripts required by Nivo Slider.
 
+#####To add slides
+
+  navigate to `nivo/slides`
+
 My Extras
 =====
 
@@ -57,9 +61,8 @@ We hate engines that you can't customize. With that in mind the are 4 more gnera
 
     nivo:views
     nivo:controller
-    nivo:model
     nivo:stylesheet
-    
+
 Do I need to explain what these do?
 
 ToDo

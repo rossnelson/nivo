@@ -5,8 +5,10 @@ module Nivo
     end
 
     def show_slider?
-      @slides = Nivo::Slide.rotate
-      render "nivo/slideshow", :slides => @slides if @show_slider
+      if @show_slider
+        @slides = Nivo::Slide.rotate
+        render "nivo/slideshow", :slides => @slides
+      end
     end
   end
 end

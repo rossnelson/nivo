@@ -1,5 +1,7 @@
 module Nivo
   class Slide < ActiveRecord::Base
+    include Nivo::ManageSlides
+
     attr_accessible :caption, :url, :active, :lft, :rgt, :image
 
     has_attached_file :image, :styles => Nivo::Config.file['slide_dimensions'].symbolize_keys
