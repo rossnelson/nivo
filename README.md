@@ -65,4 +65,5 @@ Do I need to explain what these do?
 ToDo
 =====
 
-Drag and drop sorting of slides
+* Drag and drop sorting of slides
+* js include tag view helper
