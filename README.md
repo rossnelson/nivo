@@ -8,10 +8,9 @@ Rails engine that supplies administration of slides and view helpers for the [ni
 
 #####My Dependancies
 
-As of now these need to be added to your application Gemfile. If anyone knows why these are bundled but still not included, please let me know.
-
-    gem 'paperclip'    
-    gem 'haml'
+paperclip
+haml
+jquery-rails
 
 Install Me
 =====
@@ -29,6 +28,10 @@ then
     rails g nivo:install
     
 This will create the necessary migrations and copy the `nivo_config.yml` to the config directory.
+
+If jquery is not installed run
+
+    rails g jquery:install
 
 Use Me
 =====

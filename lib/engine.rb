@@ -1,5 +1,8 @@
 require 'nivo'
 require 'rails'
+require 'paperclip'
+require 'haml'
+require 'jquery-rails'
 # require 'action_controller'
 
 

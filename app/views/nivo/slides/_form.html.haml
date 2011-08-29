@@ -1,5 +1,12 @@
 = form_for @slide, :validate => true, :html => { :multipart => true } do |f|
-  = f.error_messages
+  - if @slide.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@slide.errors.count, "error")
+        prohibited this page from being saved:
+      %ul
+        - @slide.errors.full_messages.each do |msg|
+          %li= msg
   .item 
     = f.label :caption
     %br

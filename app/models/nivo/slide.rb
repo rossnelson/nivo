@@ -39,7 +39,11 @@ module Nivo
     # Find for admin index
     #
     def self.page(search)
-      with_permissions_to(:manage).search(search).order("position")
+      if defined?(Dust::Application)
+        with_permissions_to(:manage).search(search).order("position")
+      else
+        search(search).order("position")
+      end
     end
 
     ##

@@ -1,11 +1,12 @@
 module Nivo
   class ManageSlidesController < ApplicationController
-
-    filter_access_to :all
+    
+    if defined?(Dust::Application)
+      filter_access_to :all
+      layout 'cms'
+    end
 
     unloadable
-
-    layout 'cms'
 
     def create
       Nivo::Slide.sort(params[:slides])

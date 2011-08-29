@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   #
   s.add_development_dependency "shoulda"
+  s.add_runtime_dependency "jquery-rails"
   s.add_runtime_dependency "paperclip"
   s.add_runtime_dependency "haml"
 end

@@ -1,11 +1,12 @@
 module Nivo
   class SlidesController < ApplicationController
 
-    filter_access_to :all
+    if defined?(Dust::Application)
+      filter_access_to :all
+      layout 'cms'
+    end
 
     unloadable
-
-    layout 'cms'
 
     def index
       @slides = Nivo::Slide.page(params[:search]) 
