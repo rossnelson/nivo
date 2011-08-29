@@ -8,9 +8,10 @@ Rails engine that supplies administration of slides and view helpers for the [ni
 
 #####My Dependancies
 
-paperclip  
-rails 3  
-haml
+As of now these need to be added to your application Gemfile. If anyone knows why these are bundled but still not included, please let me know.
+
+    gem 'paperclip'    
+    gem 'haml'
 
 Install Me
 =====
