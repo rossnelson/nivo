@@ -8,8 +8,8 @@ Rails engine that supplies administration of slides and view helpers for the [ni
 
 #####My Dependancies
 
-paperclip
-haml
+paperclip  
+haml  
 jquery-rails
 
 Install Me
