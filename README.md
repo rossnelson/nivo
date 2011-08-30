@@ -18,15 +18,15 @@ Install Me
 Add this to your Gemfile
 
     gem 'nivo', :git => "git://github.com/hificreative/nivo.git"
-  
+
 run
-  
+
     bundle
 
 then
 
     rails g nivo:install
-    
+
 This will create the necessary migrations and copy the `nivo_config.yml` to the config directory.
 
 If jquery is not installed run
@@ -35,7 +35,6 @@ If jquery is not installed run
 
 Use Me
 =====
-
 
 The following view helpers are shown in haml.
 
@@ -48,7 +47,7 @@ and insert
 
     = yield(:js)
 
-after your jquery inclusion
+after the closing body tag
 
 On each view you would like the slider to be visible insert 
 

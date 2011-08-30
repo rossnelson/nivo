@@ -12,7 +12,7 @@ module Nivo
       Nivo::Slide.sort(params[:slides])
 
       flash[:notice] = "Successfully sorted slides."
-      redirect_to nivo_slides_url
+      redirect_to nivo_slides_url(:format => 'js')
     end
 
   end
