@@ -47,7 +47,7 @@ and insert
 
     = yield(:js)
 
-after the closing body tag
+after the closing body tag.
 
 On each view you would like the slider to be visible insert 
 
