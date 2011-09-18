@@ -3,7 +3,7 @@
 
 
 .button_bar
-  = render :partial => 'search'
+  = render :partial => 'search' if defined?(Dust::Application)
   = link_to 'Order Slides', nivo_manage_slides_path, :class => 'ordernav tip', :id => "order_slides", :title => "ReOrder Slides"
   = link_to 'New Slide', new_nivo_slide_path, :class => 'newfile tip', :title => "New Slide"
 
