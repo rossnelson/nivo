@@ -4,22 +4,29 @@ module Nivo
 
     attr_accessible :caption, :url, :active, :lft, :rgt, :image
 
-    has_attached_file :image, :styles => Nivo::Config.file['paperclip_options'].symbolize_keys
+    OPTIONS = Nivo::Config.file['paperclip_options'].symbolize_keys
+    has_attached_file :image, OPTIONS
+
 
     ##
     # Save the image dimensions only when a new photo is uploaded
     #
-    after_post_process :save_image_dimensions
+    # after_post_process :save_image_dimensions
+    #
     def save_image_dimensions
-      geo = Paperclip::Geometry.from_file(image.queued_for_write[:slide])
+      geo = Paperclip::Geometry.from_file(image.url(:slide))
       self.width = geo.width
       self.height = geo.height
+      self.save
     end
 
     ##
     # html options for the slide image_tag
     #
     def image_options
+      if height.blank?
+        save_image_dimensions
+      end
       image_options = {
         :height => height,
         :width => width,

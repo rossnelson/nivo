@@ -1,11 +1,11 @@
 ---
 paperclip_options:
-  style:
+  styles:
     slide: '950x184#'
     thumb: '200x200>'
   ## example paperclip S3 storage solution
-  # storage: !ruby/symbol s3
-  # s3_credentials: "#{Rails.root.to_s}/config/s3.yml"
+  # storage: "s3"
+  # s3_credentials: "config/s3.yml"
   # path: "site_name/:attachment/:id/:style.:extension"
   # bucket: 'bucket_name'
 
