@@ -9,7 +9,7 @@ module Nivo
     unloadable
 
     def index
-      @slides = Nivo::Slide.page(params[:search]) 
+      @slides = Nivo::Slide.paginate_all(params[:search]) 
     end
 
     def show

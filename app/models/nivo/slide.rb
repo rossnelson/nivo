@@ -1,12 +1,14 @@
 module Nivo
   class Slide < ActiveRecord::Base
     include Nivo::ManageSlides
+    
+    scope :active_slides, where(:active => true)
+    scope :inactive_slides, where(:active => false)
 
     attr_accessible :caption, :url, :active, :lft, :rgt, :image
 
     OPTIONS = Nivo::Config.file['paperclip_options'].symbolize_keys
     has_attached_file :image, OPTIONS
-
 
     ##
     # Save the image dimensions only when a new photo is uploaded
@@ -45,7 +47,7 @@ module Nivo
     ##
     # Find for admin index
     #
-    def self.page(search)
+    def self.paginate_all(search)
       if defined?(Dust::Application)
         with_permissions_to(:manage).search(search).order("position")
       else
