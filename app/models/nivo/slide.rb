@@ -5,7 +5,7 @@ module Nivo
     scope :active_slides, where(:active => true)
     scope :inactive_slides, where(:active => false)
 
-    attr_accessible :caption, :url, :active, :lft, :rgt, :image
+    # attr_accessible :caption, :url, :active, :lft, :rgt, :image
 
     OPTIONS = Nivo::Config.file['paperclip_options'].symbolize_keys
     has_attached_file :image, OPTIONS
@@ -27,7 +27,7 @@ module Nivo
     #
     def image_options
       if height.blank?
-        save_image_dimensions
+        # save_image_dimensions
       end
       image_options = {
         :height => height,
