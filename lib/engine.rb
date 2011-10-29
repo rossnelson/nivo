@@ -1,7 +1,9 @@
 require 'nivo'
 require 'rails'
+require 'rubygems'
+require 'paperclip'
+require 'haml'
 # require 'action_controller'
-
 
 module Nivo
   class Engine < Rails::Engine

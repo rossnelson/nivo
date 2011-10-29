@@ -39,7 +39,7 @@ module Nivo
     # Find for admin index
     #
     def self.page(search)
-      with_permissions_to(:manage).search(search).order("position")
+      search(search).order("position")
     end
 
     ##
