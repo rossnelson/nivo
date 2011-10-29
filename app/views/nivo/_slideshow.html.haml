@@ -1,12 +1,12 @@
-
-= stylesheet_link_tag "nivo-slider", "default"
-
-= content_for :js do
+- content_for :js do
   = javascript_include_tag "nivo-slider"
+  -# Can't wait for the asset pipeline. ruby in js files, Amazing!
   :javascript
     $(document).ready(function() {
       $('.slides').nivoSlider(#{Nivo::Config.file['nivo_options'].to_json});
     });
+  = stylesheet_link_tag "nivo-slider", "default"
+
 
 .theme-default
   .slides{ :style =>"width:#{slides.first.width}px;"  }

@@ -32,6 +32,7 @@ eos
   s.add_development_dependency "bundler", "~> 1.0.0"
   s.add_development_dependency "rcov", ">= 0"
   s.add_runtime_dependency "rails", "~> 3.0.0"
+  s.add_runtime_dependency "jquery-rails"
   s.add_runtime_dependency "paperclip"
   s.add_runtime_dependency "haml"
 end

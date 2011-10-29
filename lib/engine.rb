@@ -3,6 +3,7 @@ require 'rails'
 require 'rubygems'
 require 'paperclip'
 require 'haml'
+require 'jquery-rails'
 # require 'action_controller'
 
 module Nivo

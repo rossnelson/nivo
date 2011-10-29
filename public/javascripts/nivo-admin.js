@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $("#order_slides").click(function(){
     mylist = $('#slides').serializeSlidelist();
-    $.post("/nivo/manage_slides", mylist);
+    $.post("/nivo/manage_slides.js", mylist);
     return false;
   });
 });

@@ -8,10 +8,9 @@ Rails engine that supplies administration of slides and view helpers for the [ni
 
 #####My Dependancies
 
-As of now these need to be added to your application Gemfile. If anyone knows why these are bundled but still not included, please let me know.
-
-    gem 'paperclip'    
-    gem 'haml'
+paperclip  
+haml  
+jquery-rails
 
 Install Me
 =====
@@ -19,20 +18,23 @@ Install Me
 Add this to your Gemfile
 
     gem 'nivo', :git => "git://github.com/hificreative/nivo.git"
-  
+
 run
-  
+
     bundle
 
 then
 
     rails g nivo:install
-    
+
 This will create the necessary migrations and copy the `nivo_config.yml` to the config directory.
+
+If jquery is not installed run
+
+    rails g jquery:install
 
 Use Me
 =====
-
 
 The following view helpers are shown in haml.
 
@@ -45,7 +47,7 @@ and insert
 
     = yield(:js)
 
-after your jquery inclusion
+after the closing body tag.
 
 On each view you would like the slider to be visible insert 
 
