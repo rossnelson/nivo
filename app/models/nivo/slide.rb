@@ -1,15 +1,22 @@
 module Nivo
   class Slide < ActiveRecord::Base
     include Nivo::ManageSlides
+    
+    scope :active_slides, where(:active => true)
+    scope :inactive_slides, where(:active => false)
 
-    attr_accessible :caption, :url, :active, :lft, :rgt, :image
+    # attr_accessible :caption, :url, :active, :lft, :rgt, :image
 
-    has_attached_file :image, :styles => Nivo::Config.file['slide_dimensions'].symbolize_keys
+    OPTIONS = Nivo::Config.file['paperclip_options'].symbolize_keys
+    has_attached_file :image, OPTIONS
 
     ##
     # html options for the slide image_tag
     #
     def image_options
+      if height.blank?
+        # save_image_dimensions
+      end
       image_options = {
         :height => Nivo::Config.file['slideshow_dimensions']['height'],
         :width => Nivo::Config.file['slideshow_dimensions']['width'],
@@ -28,7 +35,7 @@ module Nivo
     ##
     # Find for admin index
     #
-    def self.page(search)
+    def self.paginate_all(search)
       if defined?(Dust::Application)
         with_permissions_to(:manage).search(search).order("position")
       else

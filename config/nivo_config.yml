@@ -1,10 +1,15 @@
 ---
-slide_dimensions:
-  original: '500x500>'
-  slide:    '300x300#'
-  thumb:    '100x100>'
+paperclip_options:
+  styles:
+    slide: '950x184#'
+    thumb: '200x200>'
+  ## example paperclip S3 storage solution
+  # storage: "s3"
+  # s3_credentials: "config/s3.yml"
+  # path: "site_name/:attachment/:id/:style.:extension"
+  # bucket: 'bucket_name'
 
-caption: false
+show_caption: false
 
 nivo_options: #for more support visit http://nivo.dev7studios.com
   effect: "boxRainGrow" # Specify sets like: sliceDown sliceDownLeft sliceUp sliceUpLeft sliceUpDown sliceUpDownLeft fold fade random slideInRight slideInLeft boxRandom boxRain boxRainReverse boxRainGrow boxRainGrowReverse
