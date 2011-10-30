@@ -4,6 +4,10 @@ slide_dimensions:
   slide:    '300x300#'
   thumb:    '100x100>'
 
+slideshow_dimensions:
+  width: 300
+  height: 300
+
 caption: false
 
 nivo_options:

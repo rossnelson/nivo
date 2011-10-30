@@ -7,22 +7,12 @@ module Nivo
     has_attached_file :image, :styles => Nivo::Config.file['slide_dimensions'].symbolize_keys
 
     ##
-    # Save the image dimensions only when a new photo is uploaded
-    #
-    after_post_process :save_image_dimensions
-    def save_image_dimensions
-      geo = Paperclip::Geometry.from_file(image.queued_for_write[:slide])
-      self.width = geo.width
-      self.height = geo.height
-    end
-
-    ##
     # html options for the slide image_tag
     #
     def image_options
       image_options = {
-        :height => height,
-        :width => width,
+        :height => Nivo::Config.file['slideshow_dimensions']['height'],
+        :width => Nivo::Config.file['slideshow_dimensions']['width'],
         :class => "slide",
         :title => (caption if Nivo::Config.file['caption'] == true)
       }

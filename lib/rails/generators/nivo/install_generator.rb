@@ -42,7 +42,7 @@ module Nivo
         migration_template  '../../../../tmp/~migration_ready.rb',
           'db/migrate/create_nivo_tables.rb'
         remove_file 'tmp/~migration_ready.rb'
-    end
+      end
 
     end
   end

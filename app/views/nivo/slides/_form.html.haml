@@ -7,10 +7,11 @@
       %ul
         - @slide.errors.full_messages.each do |msg|
           %li= msg
-  .item 
-    = f.label :caption
-    %br
-    = f.text_field :caption, :class => 'field'
+  - if Nivo::Config.file['caption'] == true
+    .item 
+      = f.label :caption
+      %br
+      = f.text_field :caption, :class => 'field'
   .item 
     = f.label :url
     %br

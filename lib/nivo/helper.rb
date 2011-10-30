@@ -4,7 +4,7 @@ module Nivo
       @show_slider = show_slider
     end
 
-    def show_slider?
+    def show_slider
       if @show_slider
         @slides = Nivo::Slide.rotate
         render "nivo/slideshow", :slides => @slides

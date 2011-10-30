@@ -5,10 +5,10 @@
     $(document).ready(function() {
       $('.slides').nivoSlider(#{Nivo::Config.file['nivo_options'].to_json});
     });
-  = stylesheet_link_tag "nivo-slider", "default"
+  = stylesheet_link_tag "nivo-slider", "nivo-default"
 
 
 .theme-default
-  .slides{ :style =>"width:#{slides.first.width}px;"  }
+  .slides{ :style =>"width:#{Nivo::Config.file['slideshow_dimensions']['width']}px; height:#{Nivo::Config.file['slideshow_dimensions']['height']}px"  }
     - slides.each do |slide|
       = link_to image_tag(slide.image.url(:slide), slide.image_options), slide.url, :class => "slide_link"
