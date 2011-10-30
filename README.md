@@ -41,7 +41,7 @@ The following view helpers are shown in haml.
 Edit the `nivo_config.yml` to your liking.
 Then after you run `rake db:migrate` add this to your application layout
 
-    = show_slider?
+    = show_slider
 
 and insert
 
@@ -53,7 +53,7 @@ On each view you would like the slider to be visible insert
 
     - slider
 
-if the variable `slider` is set, `show_slider?` will render the slideshow partial and include the stylesheets and javascripts required by Nivo Slider.
+if the variable `slider` is set, `show_slider` will render the slideshow partial and include the stylesheets and javascripts required by Nivo Slider.
 
 #####To add slides
 
