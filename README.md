@@ -17,7 +17,7 @@ Install Me
 
 Add this to your Gemfile
 
-    gem 'nivo', :git => "git://github.com/hificreative/nivo.git"
+    gem 'nivo', :git => "git://github.com/rossnelson/nivo.git"
 
 run
 
