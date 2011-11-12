@@ -1,5 +1,5 @@
 ---
-slide_dimensions:
+paperclip_options:
   original: '500x500>'
   slide:    '300x300#'
   thumb:    '100x100>'
