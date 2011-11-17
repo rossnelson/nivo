@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "bundler", "~> 1.0.0"
   s.add_development_dependency "rcov", ">= 0"
   # s.add_runtime_dependency "rails", "~> 3.0.0"
-  s.add_runtime_dependency "jquery-rails"
-  s.add_runtime_dependency "paperclip"
-  s.add_runtime_dependency "haml"
+  s.add_runtime_dependency "jquery-rails", "1.0.14"
+  s.add_runtime_dependency "paperclip", "2.3.6"
+  s.add_runtime_dependency "haml", "3.1.3"
 end
