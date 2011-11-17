@@ -1,10 +1,6 @@
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "nivo/version"
-
 Gem::Specification.new do |s|
   s.name        = "nivo"
-  s.version     = Nivo::VERSION
+  s.version     = "0.0.7"
   s.authors     = ["Ross Nelson"]
   s.email       = ["axcess1@me.com"]
   s.homepage    = ""
