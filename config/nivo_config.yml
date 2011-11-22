@@ -9,6 +9,10 @@ paperclip_options:
   # path: "site_name/:attachment/:id/:style.:extension"
   # bucket: 'bucket_name'
 
+slideshow_dimensions: 
+  height: 184
+  width:  950
+
 show_caption: false
 
 nivo_options: #for more support visit http://nivo.dev7studios.com

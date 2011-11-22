@@ -5,10 +5,10 @@ module Nivo
   module Generators
     class ControllerGenerator < Rails::Generators::Base
       source_root File.expand_path("../../../../../app/controllers", __FILE__)
-      desc "Copies the Nivo::Slide model to your application."
+      desc "Copies the Nivo::Slide controller to your application."
 
       argument :scope, :required => false, :default => nil,
-                       :desc => "The scope to copy views to"
+                       :desc => "The scope to copy the controller to"
 
       def copy_model
         directory "nivo", "app/controllers/#{scope || :nivo}"

@@ -1,9 +1,10 @@
 module Nivo
   class Slide < ActiveRecord::Base
     include Nivo::ManageSlides
-    
+
     scope :active_slides, where(:active => true)
     scope :inactive_slides, where(:active => false)
+   
 
     # attr_accessible :caption, :url, :active, :lft, :rgt, :image
 
@@ -44,7 +45,7 @@ module Nivo
     end
 
     ##
-    # currently used in self.page
+    # currently used in self.paginate_all
     #
     def self.search(search)
       if search

@@ -11,7 +11,7 @@ module Nivo
                        :desc => "The scope to copy stylesheets to"
 
       def copy_stylesheets
-        copy_file "default.css", "public/stylesheets/default.css"
+        copy_file "nivo-default.css", "public/stylesheets/nivo-default.css"
       end
     end
   end
